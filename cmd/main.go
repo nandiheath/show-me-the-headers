@@ -18,6 +18,6 @@ func main() {
     fmt.Print("Listening to 8080..\n")
     wg := sync.WaitGroup{}
     wg.Add(1)
-    wg.Wait()
     fasthttp.ListenAndServe(":8080", HandelHeaderCalls)
+    wg.Wait()
 }
